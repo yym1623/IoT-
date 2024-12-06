@@ -6,7 +6,7 @@ import { PrimeVueResolver } from '@primevue/auto-import-resolver';
 import AutoImport from 'unplugin-auto-import/vite'
 import { fileURLToPath, URL } from 'node:url';
 // import fs from "fs";
-import eslintPlugin from 'vite-plugin-eslint';
+// import eslintPlugin from 'vite-plugin-eslint';
 
 // SSL 인증서 적용
 // const https = {
@@ -18,7 +18,7 @@ import eslintPlugin from 'vite-plugin-eslint';
 export default defineConfig({
   plugins: [
     vue(),
-    eslintPlugin(),
+    // eslintPlugin(),
     Components({
       resolvers: [
         PrimeVueResolver()
