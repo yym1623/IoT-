@@ -1,22 +1,22 @@
 <template>
-  <div class="max-w-md min-h-screen mx-auto overflow-hidden bg-white shadow-md rounded-xl md:max-w-2xl">
+  <div class="container max-w-md min-h-screen mx-auto overflow-hidden shadow-md md:max-w-2xl">
     <!-- header -->
-    <nav class="flex items-center justify-between p-6 mx-auto border-b max-w-7xl lg:px-8" aria-label="Global">
+    <nav class="flex items-center justify-between p-5 mx-auto border-b max-w-7xl lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <div  class="w-auto h-8 logo">IoT 제어 데스크 웹</div>
         </a>
       </div>
       
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+      <div class=" lg:flex lg:flex-1 lg:justify-end">
         <span class="cursor-pointer material-symbols-outlined">move</span>
         <!-- <a href="#" class="font-semibold text-gray-900 text-sm/6">Log in <span aria-hidden="true">&rarr;</span></a> -->
       </div>
     </nav>
 
     <!-- Item Section -->
-     <div class="px-10 divide-y divide-gray-100">
-       <ul role="list" class="divide-y divide-gray-100">
+     <div class="px-5 divide-y divide-gray-100">
+       <ul role="list" >
          <li class="flex justify-between py-5 gap-x-6">
            <div class="flex min-w-0 gap-x-4">
             <!-- data -->
@@ -24,14 +24,11 @@
             <span @click="off('1')" v-else  class="material-symbols-outlined">emoji_objects</span>
             <div class="logo light-logo">조명 제어</div>
            </div>
-           <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+           <div class="flex flex-col items-end shrink-0">
             <!-- toggle -->
             <ToggleSwitch  v-model="lightCheck" />
            </div>
          </li>
-       </ul>
-
-       <ul role="list" class="divide-y divide-gray-100">
          <li class="flex justify-between py-5 gap-x-6">
            <div class="flex min-w-0 gap-x-4">
             <!-- data -->
@@ -39,14 +36,11 @@
             <span @click="off('2')" v-else  class="material-symbols-outlined">emoji_objects</span>
             <div class="logo light-logo">에어컨 제어</div>
            </div>
-           <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+           <div class="flex flex-col items-end shrink-0">
             <!-- toggle -->
             <ToggleSwitch  v-model="airconCheck" />
            </div>
          </li>
-       </ul>
-
-       <ul role="list" class="divide-y divide-gray-100">
          <li class="flex justify-between py-5 gap-x-6">
            <div class="flex min-w-0 gap-x-4">
             <!-- data -->
@@ -54,7 +48,7 @@
             <span @click="off('3')" v-else  class="material-symbols-outlined">emoji_objects</span>
             <div class="logo light-logo">빔프로젝트#1 제어</div>
            </div>
-           <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+           <div class="flex flex-col items-end shrink-0">
             <!-- toggle -->
             <ToggleSwitch  v-model="beamProjector1" />
            </div>
@@ -100,6 +94,13 @@ const off = (type: string) => {
 </script>
 
 <style lang="scss" scoped>
+
+.container {
+  background: #83a4d4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
 .logo {
 
   color: #222425; /* Replace with your desired blue color */
